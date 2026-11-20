@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whatnot Fee Calculator 2026 — Tiered Commission, Real Payout &amp; Profit</title>
+<meta name="description" content="Free Whatnot fee calculator. Rates verified Nov 20, 2026: tiered commission since Sep 2026 — 8% at Standard tier (4% coins), plus 2.9% + $0.30 processing.">
+<link rel="canonical" href="https://shakaga.github.io/reseller-profit-toolkit/whatnot-fee-calculator/">
+<style>
+  :root{
+    --ink:#1c1c1e; --muted:#5b5b60; --line:#e3e3e6; --bg:#fafafa; --card:#fff;
+    --accent:#5a31e0; --accent-soft:#efeafd; --good:#0a7a42; --warn:#9a6a00;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+  .wrap{max-width:880px;margin:0 auto;padding:24px 18px 64px}
+  h1{font-size:1.9rem;line-height:1.2;margin:.2em 0 .3em}
+  h2{font-size:1.3rem;margin:1.6em 0 .5em}
+  h3{font-size:1.05rem;margin:1.2em 0 .4em}
+  p,li{font-size:1rem}
+  .sub{color:var(--muted);font-size:1.05rem;margin-top:0}
+  .verified{display:inline-block;background:#e8f6ee;color:var(--good);border:1px solid #bfe6cf;border-radius:999px;padding:2px 10px;font-size:.85rem;font-weight:600}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+  @media (max-width:720px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+  .card h2{margin-top:0;font-size:1.1rem}
+  label{display:block;font-weight:600;font-size:.92rem;margin:14px 0 4px}
+  label:first-of-type{margin-top:6px}
+  .hint{font-weight:400;color:var(--muted);font-size:.82rem;display:block}
+  input[type=number],select{width:100%;padding:10px 12px;font-size:1rem;border:1px solid var(--line);border-radius:8px;background:#fff}
+  .check{display:flex;gap:8px;align-items:flex-start;margin-top:14px}
+  .check input{margin-top:4px}
+  .check label{margin:0;font-weight:600}
+  .row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line);font-size:.98rem}
+  .row span:last-child{font-variant-numeric:tabular-nums;font-weight:600}
+  .row.total{border-bottom:none;font-size:1.12rem}
+  .row.total span:last-child{color:var(--good)}
+  .row.neg span:last-child{color:var(--accent)}
+  .cta{background:var(--accent-soft);border:1px solid #d3c2f5;border-radius:12px;padding:18px;margin-top:18px}
+  .cta h2{margin-top:0}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:8px;margin-top:6px}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:7px 8px;text-align:left}
+  th{background:#f2f2f4}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .note{color:var(--muted);font-size:.9rem}
+  .faq dt{font-weight:700;margin-top:14px}
+  .faq dd{margin:4px 0 0 0}
+  footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;color:var(--muted);font-size:.88rem}
+  a{color:#0b5cad}
+  .scrollx{overflow-x:auto}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Whatnot Fee Calculator 2026",
+  "applicationCategory":"FinanceApplication",
+  "operatingSystem":"Any",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "description":"Calculate Whatnot payout and profit for US sellers: tiered commission by category and 4-week sales tier (8% Standard in most categories, 4% coins) on the item price, plus 2.9% + $0.30 payment processing on the order total. Rates verified Nov 20, 2026."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"What is Whatnot's commission in 2026?","acceptedAnswer":{"@type":"Answer","text":"Since September 21, 2026, Whatnot commission is tiered: it depends on the category of the sale and the tier unlocked by your total sales in the previous four-week period. At the Standard tier (under $15,000 in 4 weeks) most categories pay 8% and coins pay 4%. Rates fall as your sales grow — down to 6.5% for sports and TCG, 4.5% for fashion, 5% for other collectibles, 3.5% for coins and 4% for other categories at the highest published tiers. Commission is charged on the item price only, not on shipping or tax."}},
+    {"@type":"Question","name":"What is Whatnot's payment processing fee?","acceptedAnswer":{"@type":"Answer","text":"2.9% of the total order value plus $0.30 per transaction (US). The total order value is everything the buyer paid: item price, buyer-paid shipping and taxes. Processing is not reduced by your commission tier."}},
+    {"@type":"Question","name":"Does Whatnot charge commission on shipping?","acceptedAnswer":{"@type":"Answer","text":"No. Whatnot calculates commission on Gross Merchandise Value — the sale price of the item only. Shipping and taxes paid by the buyer are excluded from the commission base, although they are included in the payment processing base."}},
+    {"@type":"Question","name":"How do Whatnot's tiers work?","acceptedAnswer":{"@type":"Answer","text":"Your total sales across all categories in a four-week (28-day) period set your tier for the next period. US thresholds: Standard under $15,000; Tier 1 from $15,000; Tier 2 from $35,000; Tier 3 from $50,000; Tier 4 from $100,000; Tier 5 from $250,000; Tier 6 from $500,000. Your rate is locked for the full period — crossing a threshold mid-period lowers your rate next period, not immediately."}},
+    {"@type":"Question","name":"Is there a 0% commission promotion on Whatnot?","acceptedAnswer":{"@type":"Answer","text":"In select categories (such as trading card games, coins and sports singles) Whatnot runs a promotion with 0% commission on the portion of an individual order's price above $1,500. Payment processing still applies to the full amount. Promotions are time-bound — check Seller Hub for current eligibility."}}
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Whatnot Fee Calculator (2026)</h1>
+  <p class="sub">Whatnot no longer charges a flat 8%. Since <strong>September 21, 2026</strong>, your commission depends on the <strong>category</strong> of the sale and the <strong>tier</strong> your last four weeks of sales unlocked. Pick both below — plus the 2.9% + $0.30 processing fee — to see your real payout and profit.</p>
+  <p><span class="verified">✓ Rates verified Nov 20, 2026 — Whatnot Help Center</span></p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Your sale</h2>
+      <form id="calc" autocomplete="off">
+        <label for="price">Item sale price ($)
+          <span class="hint">Final sale price — the winning bid or Buy It Now price</span></label>
+        <input type="number" inputmode="decimal" id="price" min="0" step="0.01" value="10.00">
+
+        <label for="shipCharged">Shipping charged to buyer ($)
+          <span class="hint">Whatnot labels are normally buyer-paid</span></label>
+        <input type="number" inputmode="decimal" id="shipCharged" min="0" step="0.01" value="4.99">
+
+        <label for="tax">Sales tax collected ($)
+          <span class="hint">Optional. Processing is charged on tax too — but the tax itself is not your profit.</span></label>
+        <input type="number" inputmode="decimal" id="tax" min="0" step="0.01" value="0.85">
+
+        <label for="category">Category
+          <span class="hint">For live sales, the category of the show; otherwise the product category</span></label>
+        <select id="category">
+          <option value="sports">Sports Cards</option>
+          <option value="tcg">Trading Card Games (TCG)</option>
+          <option value="fashion">Fashion</option>
+          <option value="collectibles">Other Collectibles</option>
+          <option value="coins">Coins</option>
+          <option value="other" selected>Everything Else (Other)</option>
+        </select>
+
+        <label for="tier">Your tier (total sales, last 4 weeks)
+          <span class="hint">Your rate is locked for the current 4-week period</span></label>
+        <select id="tier">
+          <option value="0" selected>Standard — under $15,000</option>
+          <option value="1">Tier 1 — $15,000+</option>
+          <option value="2">Tier 2 — $35,000+</option>
+          <option value="3">Tier 3 — $50,000+</option>
+          <option value="4">Tier 4 — $100,000+</option>
+          <option value="5">Tier 5 — $250,000+</option>
+          <option value="6">Tier 6 — $500,000+</option>
+        </select>
+
+        <div class="check">
+          <input type="checkbox" id="promo">
+          <label for="promo">0% commission promo on the amount over $1,500
+            <span class="hint">Select categories only (e.g. TCG, coins, sports singles) — check Seller Hub</span></label>
+        </div>
+
+        <label for="cost">What the item cost you ($)
+          <span class="hint">Your sourcing cost / COGS</span></label>
+        <input type="number" inputmode="decimal" id="cost" min="0" step="0.01" value="4.00">
+
+        <label for="shipCost">Your shipping cost ($)
+          <span class="hint">Usually $0 — the buyer pays for the Whatnot label</span></label>
+        <input type="number" inputmode="decimal" id="shipCost" min="0" step="0.01" value="0">
+      </form>
+    </div>
+
+    <div class="card" aria-live="polite">
+      <h2>Your numbers</h2>
+      <div class="row"><span>Item + shipping charged</span><span id="rGross">$14.99</span></div>
+      <div class="row neg"><span>Commission (<span id="rRate">8%</span>)</span><span id="rCommission">−$0.80</span></div>
+      <div class="row neg"><span>Payment processing (2.9% + $0.30)</span><span id="rProcessing">−$0.76</span></div>
+      <div class="row"><span>Total Whatnot fees</span><span id="rFees">$1.56</span></div>
+      <div class="row"><span>Payout to your bank*</span><span id="rPayout">$13.43</span></div>
+      <div class="row"><span>Item cost + your shipping cost</span><span id="rCosts">$4.00</span></div>
+      <div class="row total"><span>Your profit</span><span id="rProfit">$9.43</span></div>
+      <div class="row"><span>Profit margin</span><span id="rMargin">62.9%</span></div>
+      <div class="row"><span>Effective fee rate</span><span id="rEffRate">10.4%</span></div>
+      <p class="note">*Payout excludes any sales tax collected (that money is remitted, not earned). The default example above is Whatnot's own worked example from its Help Center: a $10 item with $4.99 shipping and $0.85 tax.</p>
+    </div>
+  </div>
+  <div class="cta">
+    <h2>Selling on Whatnot every week?</h2>
+    <p>A one-off calculator can't remember that your tier changed last period, or that coins are charged at half the rate of fashion. The <strong>Reseller Profit Toolkit</strong> can: a spreadsheet (Google Sheets + Excel) that logs every sale across Whatnot, eBay, Poshmark, Mercari, Depop, Etsy and more, applies each platform's <em>current</em> fees, and rolls it up into profit, ROI and a quarterly tax set-aside. Whatnot's commission rate is an editable field in the Toolkit, so when your tier moves — or Whatnot moves the tiers — you change one cell, not every formula.</p>
+    <p>Every fee rate in the Toolkit is verified against the platform's official pages — and when a platform changes its fees, buyers get the updated sheet. (Whatnot's September 2026 tier change is exactly the kind of update that silently breaks older spreadsheets.)</p>
+    <a class="btn" href="https://japanrentguide.gumroad.com/l/kzbtnf?utm_source=calculator_site&utm_medium=cta&utm_campaign=whatnot&utm_content=result_screen" rel="nofollow">Get the Reseller Profit Toolkit — $19 launch price through Dec 31, 2026 (then $24)</a>
+    <p class="note">Or start free with the <a href="../reseller-profit-spreadsheet/">free reseller profit spreadsheet</a> — the same verified fee math in a starter log.</p>
+    <p class="note">One-time payment. Google Sheets + Excel versions included, with a pre-filled sample copy.</p>
+  </div>
+
+  <h2>Whatnot commission rates (US, from Sep 21, 2026)</h2>
+  <p>Your tier is set by your <strong>total sales across all categories</strong> in a four-week period; the rate you pay depends on the <strong>category of each sale</strong>.</p>
+  <div class="scrollx">
+  <table>
+    <tr><th>Category</th><th class="num">Standard<br>&lt;$15K</th><th class="num">Tier 1<br>$15K+</th><th class="num">Tier 2<br>$35K+</th><th class="num">Tier 3<br>$50K+</th><th class="num">Tier 4<br>$100K+</th><th class="num">Tier 5<br>$250K+</th><th class="num">Tier 6<br>$500K+</th></tr>
+    <tr><td>Sports Cards</td><td class="num">8.00%</td><td class="num">7.75%</td><td class="num">7.50%</td><td class="num">7.25%</td><td class="num">7.00%</td><td class="num">6.75%</td><td class="num">6.50%</td></tr>
+    <tr><td>Trading Card Games</td><td class="num">8.00%</td><td class="num">7.75%</td><td class="num">7.50%</td><td class="num">7.25%</td><td class="num">7.00%</td><td class="num">6.75%</td><td class="num">6.50%</td></tr>
+    <tr><td>Fashion</td><td class="num">8.00%</td><td class="num">7.00%</td><td class="num">6.50%</td><td class="num">5.50%</td><td class="num">5.00%</td><td class="num">4.50%</td><td class="num">4.50%</td></tr>
+    <tr><td>Other Collectibles</td><td class="num">8.00%</td><td class="num">7.25%</td><td class="num">6.50%</td><td class="num">6.00%</td><td class="num">5.00%</td><td class="num">5.00%</td><td class="num">5.00%</td></tr>
+    <tr><td>Coins</td><td class="num">4.00%</td><td class="num">3.90%</td><td class="num">3.80%</td><td class="num">3.70%</td><td class="num">3.60%</td><td class="num">3.55%</td><td class="num">3.50%</td></tr>
+    <tr><td>Everything Else</td><td class="num">8.00%</td><td class="num">7.00%</td><td class="num">6.50%</td><td class="num">5.50%</td><td class="num">4.00%</td><td class="num">4.00%</td><td class="num">4.00%</td></tr>
+  </table>
+  </div>
+  <p class="note">Plus payment processing on every order: <strong>2.9% of the total order value + $0.30</strong> (US). Processing is charged on item + shipping + tax, and is <em>not</em> reduced by your tier. In select categories, a promotion charges 0% commission on the portion of an order's price above $1,500.</p>
+
+  <h2>What you actually keep (Standard tier, 8% category, no shipping, no tax)</h2>
+  <table>
+    <tr><th class="num">Item price</th><th class="num">Commission</th><th class="num">Processing</th><th class="num">You keep</th><th class="num">Effective rate</th></tr>
+    <tr><td class="num">$10</td><td class="num">$0.80</td><td class="num">$0.59</td><td class="num">$8.61</td><td class="num">13.9%</td></tr>
+    <tr><td class="num">$25</td><td class="num">$2.00</td><td class="num">$1.03</td><td class="num">$21.97</td><td class="num">12.1%</td></tr>
+    <tr><td class="num">$50</td><td class="num">$4.00</td><td class="num">$1.75</td><td class="num">$44.25</td><td class="num">11.5%</td></tr>
+    <tr><td class="num">$100</td><td class="num">$8.00</td><td class="num">$3.20</td><td class="num">$88.80</td><td class="num">11.2%</td></tr>
+    <tr><td class="num">$250</td><td class="num">$20.00</td><td class="num">$7.55</td><td class="num">$222.45</td><td class="num">11.0%</td></tr>
+  </table>
+  <p>The flat $0.30 and the 2.9% processing are why the effective rate is always higher than your commission rate — and why it falls as prices rise. On coins, halve the commission column.</p>
+
+  <h2>How the math works</h2>
+  <p><strong>Commission</strong> = item price × your category-and-tier rate. The base is the item price <em>only</em> (Whatnot calls it GMV) — shipping and tax are excluded, which is unusual: most marketplaces charge their percentage on the whole transaction.</p>
+  <p><strong>Processing</strong> = (item price + shipping charged + sales tax collected) × 2.9% + $0.30. Note the base is the opposite of the commission base: everything the buyer paid.</p>
+  <p><strong>Profit</strong> = item price + shipping charged − commission − processing − item cost − your shipping cost. Sales tax is excluded from profit because it was never your money.</p>
+  <p>Full walkthrough with worked examples: <a href="../whatnot-fees-2026/">Whatnot Fees 2026: The Tiered Commission, Explained</a></p>
+
+  <h2>Fee change log</h2>
+  <table>
+    <tr><th>Date</th><th>Change</th></tr>
+    <tr><td>Before Sep 2026</td><td>Flat commission: 8% in most categories (coins lower), plus 2.9% + $0.30 processing.</td></tr>
+    <tr><td>Sep 21, 2026</td><td>Tiered commission takes effect for existing sellers: rate set by category × tier unlocked by trailing 4-week sales. Existing sellers were placed in tiers based on Aug 24 – Sep 20 sales.</td></tr>
+    <tr><td>Nov 1, 2026</td><td>Premier Shop no longer includes a 10% commission discount in markets with tiered rates.</td></tr>
+    <tr><td>Nov 20, 2026</td><td>Rates on this page re-verified against Whatnot's Help Center. No changes found.</td></tr>
+  </table>
+
+  <h2>FAQ</h2>
+  <dl class="faq">
+    <dt>What is Whatnot's commission in 2026?</dt>
+    <dd>It depends on your category and tier. At Standard (under $15K of sales in 4 weeks), most categories pay 8% and coins pay 4%. Sell more and the rate falls — to as low as 6.5% (sports/TCG), 4.5% (fashion), 5% (other collectibles), 3.5% (coins) or 4% (everything else) at the top published tiers. Custom rates as low as 3% exist for the highest-volume sellers by invitation.</dd>
+    <dt>Does Whatnot charge commission on shipping or tax?</dt>
+    <dd>No. Commission is on the item price only. But the 2.9% + $0.30 processing fee <em>is</em> charged on the full amount the buyer paid, including shipping and tax.</dd>
+    <dt>I crossed into a higher tier mid-period. Why is my rate the same?</dt>
+    <dd>Rates are locked for the full four-week period. Crossing a threshold lowers your rate from the <em>next</em> period. If your sales drop, your rate rises again the period after that.</dd>
+    <dt>Is the 0% commission over $1,500 real?</dt>
+    <dd>Yes, as a promotion in select categories (Whatnot lists examples such as trading card games, coins and sports singles): commission is 0% on the portion of a single order's price above $1,500, while processing still applies to the full amount. It's time-bound — confirm it's running in Seller Hub.</dd>
+    <dt>What rate do new sellers start at?</dt>
+    <dd>Standard. If you joined after Sep 21, 2026, the tiered structure applies from the Monday after you got seller access, and your first periods of sales build the tier you'll get next.</dd>
+  </dl>
+
+  <footer>
+    <p>Sources (checked Nov 20, 2026): Whatnot Help Center — <a href="https://help.whatnot.com/hc/en-us/articles/4847069165965-Whatnot-seller-fees">Whatnot seller fees</a> (US rate card, tier rules, processing 2.9% + $0.30 on total order value); Whatnot — <a href="https://www.whatnot.com/seller/fees">How Fees Work</a>.</p>
+    <p>Not affiliated with Whatnot. Whatnot is a trademark of its owner; this page uses published fee schedules for calculation purposes only. Your rate card in Seller Hub is the final word — always confirm before relying on these figures for high-value sales.</p>
+  </footer>
+
+</div>
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var ids = ["price","shipCharged","tax","cost","shipCost","category","tier","promo"];
+  // US commission rates in basis points, by category and tier (Standard..Tier 6),
+  // from Whatnot's Help Center rate card, verified Nov 20, 2026.
+  var RATES = {
+    sports:       [800, 775, 750, 725, 700, 675, 650],
+    tcg:          [800, 775, 750, 725, 700, 675, 650],
+    fashion:      [800, 700, 650, 550, 500, 450, 450],
+    collectibles: [800, 725, 650, 600, 500, 500, 500],
+    coins:        [400, 390, 380, 370, 360, 355, 350],
+    other:        [800, 700, 650, 550, 400, 400, 400]
+  };
+  // All money math is done in integer cents, fees rounded half-up to the cent,
+  // so results match the worked examples in the companion article exactly.
+  function cents(id){ var v = parseFloat($(id).value); return isNaN(v) || v < 0 ? 0 : Math.round(v * 100); }
+  function fmt(c){ return "$" + (c / 100).toFixed(2); }
+  function pct(part, whole){ if (whole <= 0) return "—"; var v = part / whole * 100; return (Math.round((v + 1e-9) * 10) / 10).toFixed(1) + "%"; }
+  function rateLabel(bp){ var v = bp / 100; return (v % 1 === 0 ? v.toFixed(0) : v) + "%"; }
+  function calc(){
+    var price = cents("price"), ship = cents("shipCharged"), tax = cents("tax");
+    var cost = cents("cost"), shipCost = cents("shipCost");
+    var bp = RATES[$("category").value][parseInt($("tier").value, 10)];
+    var gross = price + ship;
+    var total = gross + tax;
+    var commBase = $("promo").checked ? Math.min(price, 150000) : price;
+    var commission = Math.round(commBase * bp / 10000);
+    var processing = total === 0 ? 0 : Math.round(total * 29 / 1000) + 30;
+    var fees = commission + processing;
+    var payout = gross - fees;               // tax excluded: pass-through, not earnings
+    var profit = payout - cost - shipCost;
+    $("rRate").textContent = rateLabel(bp);
+    $("rGross").textContent = fmt(gross);
+    $("rCommission").textContent = "−" + fmt(commission);
+    $("rProcessing").textContent = "−" + fmt(processing);
+    $("rFees").textContent = fmt(fees);
+    $("rPayout").textContent = fmt(payout);
+    $("rCosts").textContent = fmt(cost + shipCost);
+    $("rProfit").textContent = fmt(profit);
+    $("rProfit").style.color = profit < 0 ? "#5a31e0" : "";
+    $("rMargin").textContent = pct(profit, gross);
+    $("rEffRate").textContent = pct(fees, gross);
+  }
+  ids.forEach(function(id){ $(id).addEventListener("input", calc); $(id).addEventListener("change", calc); });
+  calc();
+})();
+</script>
+</body>
+</html>

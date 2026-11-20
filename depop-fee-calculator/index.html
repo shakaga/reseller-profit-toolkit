@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Depop Fee Calculator 2026 — 0% Selling Fee, Real Payout &amp; Profit</title>
+<meta name="description" content="Free Depop fee calculator. Rates verified Nov 20, 2026: 0% selling fee for US sellers — you pay only 3.3% + $0.45 processing, plus optional 12% Boost.">
+<link rel="canonical" href="https://shakaga.github.io/reseller-profit-toolkit/depop-fee-calculator/">
+<style>
+  :root{
+    --ink:#1c1c1e; --muted:#5b5b60; --line:#e3e3e6; --bg:#fafafa; --card:#fff;
+    --accent:#d92323; --accent-soft:#fdecec; --good:#0a7a42; --warn:#9a6a00;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+  .wrap{max-width:880px;margin:0 auto;padding:24px 18px 64px}
+  h1{font-size:1.9rem;line-height:1.2;margin:.2em 0 .3em}
+  h2{font-size:1.3rem;margin:1.6em 0 .5em}
+  h3{font-size:1.05rem;margin:1.2em 0 .4em}
+  p,li{font-size:1rem}
+  .sub{color:var(--muted);font-size:1.05rem;margin-top:0}
+  .verified{display:inline-block;background:#e8f6ee;color:var(--good);border:1px solid #bfe6cf;border-radius:999px;padding:2px 10px;font-size:.85rem;font-weight:600}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+  @media (max-width:720px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+  .card h2{margin-top:0;font-size:1.1rem}
+  label{display:block;font-weight:600;font-size:.92rem;margin:14px 0 4px}
+  label:first-of-type{margin-top:6px}
+  .hint{font-weight:400;color:var(--muted);font-size:.82rem;display:block}
+  input[type=number]{width:100%;padding:10px 12px;font-size:1rem;border:1px solid var(--line);border-radius:8px}
+  .check{display:flex;gap:8px;align-items:flex-start;margin-top:14px}
+  .check input{margin-top:4px}
+  .check label{margin:0;font-weight:600}
+  .row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line);font-size:.98rem}
+  .row span:last-child{font-variant-numeric:tabular-nums;font-weight:600}
+  .row.total{border-bottom:none;font-size:1.12rem}
+  .row.total span:last-child{color:var(--good)}
+  .row.neg span:last-child{color:var(--accent)}
+  .cta{background:var(--accent-soft);border:1px solid #f3c2c2;border-radius:12px;padding:18px;margin-top:18px}
+  .cta h2{margin-top:0}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:8px;margin-top:6px}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.95rem}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+  th{background:#f2f2f4}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .note{color:var(--muted);font-size:.9rem}
+  .faq dt{font-weight:700;margin-top:14px}
+  .faq dd{margin:4px 0 0 0}
+  footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;color:var(--muted);font-size:.88rem}
+  a{color:#0b5cad}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Depop Fee Calculator 2026",
+  "applicationCategory":"FinanceApplication",
+  "operatingSystem":"Any",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "description":"Calculate Depop payout and profit for US sellers: 0% selling fee, 3.3% + $0.45 payment processing, optional 12% Boost fee. Rates verified Nov 20, 2026."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Does Depop still charge a 10% selling fee?","acceptedAnswer":{"@type":"Answer","text":"No. Depop removed the 10% selling fee for US-based sellers in July 2024. US, UK and Australian sellers pay no Depop selling fee at all. The remaining per-sale cost is the payment processing fee. Sellers based outside the UK, US and Australia still pay a 10% selling fee."}},
+    {"@type":"Question","name":"What is Depop's payment processing fee in the US?","acceptedAnswer":{"@type":"Answer","text":"3.3% + $0.45 per transaction through Depop Payments (via Stripe). It is charged on the item sale price plus shipping costs and any applicable taxes — not on the item price alone."}},
+    {"@type":"Question","name":"How much is the Depop Boost fee in 2026?","acceptedAnswer":{"@type":"Answer","text":"12% for UK and US listings boosted from 23 March 2026 (the previous rate was 8%). It is charged on the item sale price excluding taxes, plus the shipping cost if you did not use a Depop shipping label. You only pay it when a boosted item sells."}},
+    {"@type":"Question","name":"Who pays Depop's Marketplace fee?","acceptedAnswer":{"@type":"Answer","text":"The buyer. Buyers in the US and UK pay a Marketplace fee of up to 5% of the item price plus up to $1 at checkout. It is never deducted from the seller's payout."}},
+    {"@type":"Question","name":"Are Depop fees refunded if a sale is refunded?","acceptedAnswer":{"@type":"Answer","text":"Yes. According to Depop's Help Centre, if a sale is refunded, the selling fee, payment processing fee and boosting fee are all reversed automatically for Depop Payments transactions."}}
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Depop Fee Calculator (2026)</h1>
+  <p class="sub">Depop charges US sellers <strong>0% selling fee</strong>. What actually comes out of your payout is the payment processing fee — and, if you boost, the Boost fee. Enter one sale below to see your real payout and profit.</p>
+  <p><span class="verified">✓ Rates verified Nov 20, 2026 — Depop Help Centre</span></p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Your sale</h2>
+      <form id="calc" autocomplete="off">
+        <label for="price">Item sale price ($)
+          <span class="hint">What the buyer paid for the item itself</span></label>
+        <input type="number" inputmode="decimal" id="price" min="0" step="0.01" value="35.00">
+
+        <label for="shipCharged">Shipping charged to buyer ($)
+          <span class="hint">0 if you offer free shipping</span></label>
+        <input type="number" inputmode="decimal" id="shipCharged" min="0" step="0.01" value="0">
+
+        <label for="tax">Sales tax collected ($)
+          <span class="hint">Optional. Processing is charged on tax too — but the tax itself is not your profit.</span></label>
+        <input type="number" inputmode="decimal" id="tax" min="0" step="0.01" value="0">
+
+        <label for="cost">What the item cost you ($)
+          <span class="hint">Your sourcing cost / COGS</span></label>
+        <input type="number" inputmode="decimal" id="cost" min="0" step="0.01" value="12.00">
+
+        <label for="shipCost">Your shipping cost ($)
+          <span class="hint">What you actually pay for the label / postage</span></label>
+        <input type="number" inputmode="decimal" id="shipCost" min="0" step="0.01" value="6.50">
+
+        <div class="check">
+          <input type="checkbox" id="boosted">
+          <label for="boosted">This sale came from a Boosted Listing (12%)
+            <span class="hint">Rate for UK/US listings boosted from 23 Mar 2026</span></label>
+        </div>
+        <div class="check">
+          <input type="checkbox" id="depopLabel" checked>
+          <label for="depopLabel">I used a Depop shipping label
+            <span class="hint">If not, the Boost fee also applies to the shipping you charged</span></label>
+        </div>
+      </form>
+    </div>
+
+    <div class="card" aria-live="polite">
+      <h2>Your numbers</h2>
+      <div class="row"><span>Item + shipping charged</span><span id="rGross">$35.00</span></div>
+      <div class="row neg"><span>Payment processing (3.3% + $0.45)</span><span id="rProcessing">−$1.61</span></div>
+      <div class="row neg"><span>Boost fee (12%)</span><span id="rBoost">−$0.00</span></div>
+      <div class="row"><span>Total Depop fees</span><span id="rFees">$1.61</span></div>
+      <div class="row"><span>Payout to your bank*</span><span id="rPayout">$33.39</span></div>
+      <div class="row"><span>Item cost + your shipping cost</span><span id="rCosts">$18.50</span></div>
+      <div class="row total"><span>Your profit</span><span id="rProfit">$14.89</span></div>
+      <div class="row"><span>Profit margin</span><span id="rMargin">42.5%</span></div>
+      <div class="row"><span>Effective fee rate</span><span id="rEffRate">4.6%</span></div>
+      <p class="note">*Payout excludes any sales tax collected (that money is remitted, not earned) and excludes the buyer-paid Marketplace fee, which never touches your payout.</p>
+    </div>
+  </div>
+  <div class="cta">
+    <h2>Selling more than a few items a month?</h2>
+    <p>A one-off calculator tells you what <em>one</em> sale made. It doesn't track your inventory, your cost basis across 300 listings, or what to set aside for taxes. The <strong>Reseller Profit Toolkit</strong> does: a spreadsheet (Google Sheets + Excel) that logs every sale across Depop, eBay, Poshmark, Mercari, Etsy, Whatnot and more, applies each platform's <em>current</em> fees automatically, and rolls it up into profit, ROI and a quarterly tax set-aside.</p>
+    <p>Every fee rate in the Toolkit is verified against the platform's official pages — and when a platform changes its fees, buyers get the updated sheet. (Depop's old 10% fee is still sitting in a lot of spreadsheets. It was removed in July 2024.)</p>
+    <a class="btn" href="https://japanrentguide.gumroad.com/l/kzbtnf?utm_source=calculator_site&utm_medium=cta&utm_campaign=depop&utm_content=result_screen" rel="nofollow">Get the Reseller Profit Toolkit — $19 launch price through Dec 31, 2026 (then $24)</a>
+    <p class="note">Or start free with the <a href="../reseller-profit-spreadsheet/">free reseller profit spreadsheet</a> — the same verified fee math in a starter log.</p>
+    <p class="note">One-time payment. Google Sheets + Excel versions included, with a pre-filled sample copy.</p>
+  </div>
+
+  <h2>Depop fees in 2026, at a glance (US seller)</h2>
+  <table>
+    <tr><th>Fee</th><th>Amount</th><th>Charged on</th><th>Who pays</th></tr>
+    <tr><td>Selling fee</td><td><strong>0% — none</strong></td><td>—</td><td>—</td></tr>
+    <tr><td>Payment processing (Depop Payments, via Stripe)</td><td><strong>3.3% + $0.45</strong></td><td>Item price + shipping + applicable taxes</td><td>Seller</td></tr>
+    <tr><td>Boosted Listings fee (optional)</td><td><strong>12%</strong> (listings boosted from 23 Mar 2026; 8% before)</td><td>Item price excl. tax, + shipping if no Depop label</td><td>Seller, only when a boosted item sells</td></tr>
+    <tr><td>Marketplace fee</td><td>Up to 5% + up to $1</td><td>Item price only, excl. tax and shipping</td><td><strong>Buyer</strong> — never deducted from your payout</td></tr>
+  </table>
+  <p class="note">Outside the US: UK sellers pay 2.9% + £0.30 processing; Australian sellers 2.6% + A$0.30 — both also with 0% selling fee. Sellers based outside the UK, US and Australia still pay a 10% selling fee plus their payment processor's fee.</p>
+
+  <h2>What you actually keep (no shipping charge, no tax, no Boost)</h2>
+  <table>
+    <tr><th class="num">Item price</th><th class="num">Processing fee</th><th class="num">You keep</th><th class="num">Effective rate</th></tr>
+    <tr><td class="num">$10</td><td class="num">$0.78</td><td class="num">$9.22</td><td class="num">7.8%</td></tr>
+    <tr><td class="num">$20</td><td class="num">$1.11</td><td class="num">$18.89</td><td class="num">5.6%</td></tr>
+    <tr><td class="num">$35</td><td class="num">$1.61</td><td class="num">$33.39</td><td class="num">4.6%</td></tr>
+    <tr><td class="num">$50</td><td class="num">$2.10</td><td class="num">$47.90</td><td class="num">4.2%</td></tr>
+    <tr><td class="num">$100</td><td class="num">$3.75</td><td class="num">$96.25</td><td class="num">3.8%</td></tr>
+  </table>
+  <p>The flat $0.45 is why cheap items sting: on an $8 sale, processing alone takes $0.71 — 8.9% of the price — before you've paid for shipping or the item itself.</p>
+
+  <h2>How the math works</h2>
+  <p><strong>Processing fee</strong> = (item price + shipping charged + sales tax collected) × 3.3% + $0.45. The trap most sellers miss: the percentage applies to the <em>total</em> Depop processes, including the shipping the buyer paid and any tax — not just your item price.</p>
+  <p><strong>Boost fee</strong> = item price × 12%, plus shipping charged × 12% if you shipped on your own label instead of a Depop label. Charged only when a boosted listing sells, and refunded if the sale is refunded.</p>
+  <p><strong>Profit</strong> = item price + shipping charged − processing − Boost − item cost − your shipping cost. Sales tax is excluded from profit because it was never your money.</p>
+  <p>Full walkthrough with worked examples: <a href="../depop-fees-2026/">Depop Fees 2026: What You Actually Pay to Sell</a></p>
+
+  <h2>Fee change log</h2>
+  <table>
+    <tr><th>Date</th><th>Change</th></tr>
+    <tr><td>Jul 2024</td><td>US selling fee (10%) removed for US-based sellers; buyer Marketplace fee introduced.</td></tr>
+    <tr><td>Jul 2026</td><td>Selling fee removed for Australian sellers (the UK made the same change in Mar 2024 and the US in Jul 2024).</td></tr>
+    <tr><td>23 Mar 2026</td><td>Boosted Listings fee for UK/US raised to 12% for new listings (was 8%).</td></tr>
+    <tr><td>Nov 20, 2026</td><td>Rates on this page re-verified against Depop's Help Centre. No changes found.</td></tr>
+  </table>
+
+  <h2>FAQ</h2>
+  <dl class="faq">
+    <dt>Does Depop still charge a 10% selling fee?</dt>
+    <dd>No — not for sellers based in the US, UK or Australia. Depop removed it (US: July 2024). If a calculator or spreadsheet still takes 10% off your Depop sales, it's out of date. Sellers based elsewhere still pay 10%.</dd>
+    <dt>What is Depop's payment processing fee in the US?</dt>
+    <dd>3.3% + $0.45 per transaction via Depop Payments (Stripe), charged on item price + shipping + applicable taxes.</dd>
+    <dt>How much is the Depop Boost fee in 2026 — and is it worth it?</dt>
+    <dd>It depends on your margin. At 12%, a boosted sale of a $60 item costs $7.20 on top of processing. Use the calculator above with the Boost box checked and unchecked — if the item wouldn't sell unboosted, compare the boosted profit against $0, not against the unboosted profit.</dd>
+    <dt>Who pays the Marketplace fee?</dt>
+    <dd>Your buyer, at checkout — up to 5% of the item price plus up to $1. It's worth knowing it exists (it raises your buyer's total), but it never reduces your payout.</dd>
+    <dt>Do I get fees back on a refund?</dt>
+    <dd>Yes. Depop reverses the selling fee, processing fee and boosting fee automatically on Depop Payments transactions when a sale is refunded.</dd>
+  </dl>
+
+  <footer>
+    <p>Sources (checked Nov 20, 2026): Depop Help Centre — <a href="https://depophelp.zendesk.com/hc/en-gb/articles/360001791127-Seller-fees-and-charges">Seller fees and charges</a>; Depop Help Centre — <a href="https://depophelp.zendesk.com/hc/en-gb/articles/21752555753361-What-is-the-Marketplace-fee">What is the Marketplace fee?</a></p>
+    <p>Not affiliated with Depop. Depop is a trademark of its owner; this page uses published fee schedules for calculation purposes only. Always confirm rates in Depop's Help Centre before relying on them for high-value sales.</p>
+  </footer>
+
+</div>
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var ids = ["price","shipCharged","tax","cost","shipCost","boosted","depopLabel"];
+  // All money math is done in integer cents, fees rounded half-up to the cent,
+  // so results match the worked examples in the companion article exactly.
+  function cents(id){ var v = parseFloat($(id).value); return isNaN(v) || v < 0 ? 0 : Math.round(v * 100); }
+  function fmt(c){ return "$" + (c / 100).toFixed(2); }
+  function pct(part, whole){ if (whole <= 0) return "—"; var v = part / whole * 100; return (Math.round((v + 1e-9) * 10) / 10).toFixed(1) + "%"; }
+  function calc(){
+    var price = cents("price"), ship = cents("shipCharged"), tax = cents("tax");
+    var cost = cents("cost"), shipCost = cents("shipCost");
+    var gross = price + ship;
+    var processing = (gross + tax) === 0 ? 0 : Math.round((gross + tax) * 33 / 1000) + 45;
+    var boostBase = price + ($("depopLabel").checked ? 0 : ship);
+    var boost = $("boosted").checked ? Math.round(boostBase * 12 / 100) : 0;
+    var fees = processing + boost;
+    var payout = gross - fees;               // tax excluded: pass-through, not earnings
+    var profit = payout - cost - shipCost;
+    $("rGross").textContent = fmt(gross);
+    $("rProcessing").textContent = "−" + fmt(processing);
+    $("rBoost").textContent = "−" + fmt(boost);
+    $("rFees").textContent = fmt(fees);
+    $("rPayout").textContent = fmt(payout);
+    $("rCosts").textContent = fmt(cost + shipCost);
+    $("rProfit").textContent = fmt(profit);
+    $("rProfit").style.color = profit < 0 ? "#d92323" : "";
+    $("rMargin").textContent = pct(profit, gross);
+    $("rEffRate").textContent = pct(fees, gross);
+  }
+  ids.forEach(function(id){ $(id).addEventListener("input", calc); $(id).addEventListener("change", calc); });
+  calc();
+})();
+</script>
+</body>
+</html>

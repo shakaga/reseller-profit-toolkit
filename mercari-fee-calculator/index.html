@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mercari Fee Calculator 2026 — 10% on Price + Shipping, Real Payout &amp; Profit</title>
+<meta name="description" content="Free Mercari fee calculator. Rates verified Nov 20, 2026: one 10% selling fee on the item price plus buyer-paid shipping — no processing fee. See your payout.">
+<link rel="canonical" href="https://shakaga.github.io/reseller-profit-toolkit/mercari-fee-calculator/">
+<style>
+  :root{
+    --ink:#1c1c1e; --muted:#5b5b60; --line:#e3e3e6; --bg:#fafafa; --card:#fff;
+    --accent:#0073b1; --accent-soft:#e8f3fa; --good:#0a7a42; --warn:#9a6a00;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+  .wrap{max-width:880px;margin:0 auto;padding:24px 18px 64px}
+  h1{font-size:1.9rem;line-height:1.2;margin:.2em 0 .3em}
+  h2{font-size:1.3rem;margin:1.6em 0 .5em}
+  h3{font-size:1.05rem;margin:1.2em 0 .4em}
+  p,li{font-size:1rem}
+  .sub{color:var(--muted);font-size:1.05rem;margin-top:0}
+  .verified{display:inline-block;background:#e8f6ee;color:var(--good);border:1px solid #bfe6cf;border-radius:999px;padding:2px 10px;font-size:.85rem;font-weight:600}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+  @media (max-width:720px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+  .card h2{margin-top:0;font-size:1.1rem}
+  label{display:block;font-weight:600;font-size:.92rem;margin:14px 0 4px}
+  label:first-of-type{margin-top:6px}
+  .hint{font-weight:400;color:var(--muted);font-size:.82rem;display:block}
+  input[type=number]{width:100%;padding:10px 12px;font-size:1rem;border:1px solid var(--line);border-radius:8px}
+  .row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line);font-size:.98rem}
+  .row span:last-child{font-variant-numeric:tabular-nums;font-weight:600}
+  .row.total{border-bottom:none;font-size:1.12rem}
+  .row.total span:last-child{color:var(--good)}
+  .row.neg span:last-child{color:var(--accent)}
+  .cta{background:var(--accent-soft);border:1px solid #bcd9ec;border-radius:12px;padding:18px;margin-top:18px}
+  .cta h2{margin-top:0}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:8px;margin-top:6px}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.95rem}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+  th{background:#f2f2f4}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .note{color:var(--muted);font-size:.9rem}
+  .faq dt{font-weight:700;margin-top:14px}
+  .faq dd{margin:4px 0 0 0}
+  footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;color:var(--muted);font-size:.88rem}
+  a{color:#0b5cad}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Mercari Fee Calculator 2026",
+  "applicationCategory":"FinanceApplication",
+  "operatingSystem":"Any",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "description":"Calculate Mercari payout and profit for US sellers: a flat 10% selling fee on the item price plus buyer-paid shipping, no separate payment processing fee. Buyers pay a separate 3.6% Buyer Protection fee. Rates verified Nov 20, 2026."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How much does Mercari take from a sale?","acceptedAnswer":{"@type":"Answer","text":"A flat 10% selling fee, charged on the completed item price plus the shipping the buyer pays — for listings created or updated since January 6, 2025. There is no additional payment processing fee for sellers or buyers on those listings, and listing is free."}},
+    {"@type":"Question","name":"Does Mercari charge its 10% fee on shipping?","acceptedAnswer":{"@type":"Answer","text":"Yes. The 10% applies to the item price and the buyer-paid shipping combined. On a $40 item with a $7.99 label, the fee is $4.80 — 12.0% of the item price. Sales tax is not part of the fee base."}},
+    {"@type":"Question","name":"What is Mercari's Buyer Protection fee?","acceptedAnswer":{"@type":"Answer","text":"A 3.6% fee paid by the buyer at checkout, on the same base as the selling fee (item price plus buyer-paid shipping). It is charged on top of your price and never deducted from your payout — but it does raise the total your buyer sees."}},
+    {"@type":"Question","name":"How much does it cost to cash out of Mercari?","acceptedAnswer":{"@type":"Answer","text":"Direct deposit to a checking account is free (a $2 fee applies only if a withdrawal fails). Instant Pay to an eligible debit card costs a flat $3 per withdrawal, limited to once a day and $600 per month."}}
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Mercari Fee Calculator (2026)</h1>
+  <p class="sub">Mercari charges one fee: <strong>10% of the item price plus the shipping the buyer pays</strong>. No processing fee on top. The catch is the base — that 10% also takes a cut of the shipping. Enter one sale to see your real payout and profit.</p>
+  <p><span class="verified">✓ Rates verified Nov 20, 2026 — Mercari Help Center</span></p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Your sale</h2>
+      <form id="calc" autocomplete="off">
+        <label for="price">Item sale price ($)
+          <span class="hint">The completed sale price of the item</span></label>
+        <input type="number" inputmode="decimal" id="price" min="0" step="0.01" value="40.00">
+
+        <label for="shipCharged">Shipping charged to buyer ($)
+          <span class="hint">Mercari takes 10% of this too. 0 if you offer free shipping</span></label>
+        <input type="number" inputmode="decimal" id="shipCharged" min="0" step="0.01" value="7.99">
+
+        <label for="cost">What the item cost you ($)
+          <span class="hint">Your sourcing cost / COGS</span></label>
+        <input type="number" inputmode="decimal" id="cost" min="0" step="0.01" value="15.00">
+
+        <label for="shipCost">Your shipping cost ($)
+          <span class="hint">The label cost, if it comes out of your proceeds (e.g. Mercari prepaid label or free shipping)</span></label>
+        <input type="number" inputmode="decimal" id="shipCost" min="0" step="0.01" value="7.99">
+      </form>
+    </div>
+
+    <div class="card" aria-live="polite">
+      <h2>Your numbers</h2>
+      <div class="row"><span>Item + shipping charged</span><span id="rGross">$47.99</span></div>
+      <div class="row neg"><span>Selling fee (10% of price + shipping)</span><span id="rFee">−$4.80</span></div>
+      <div class="row"><span>Payout to your balance</span><span id="rPayout">$43.19</span></div>
+      <div class="row"><span>Item cost + your shipping cost</span><span id="rCosts">$22.99</span></div>
+      <div class="row total"><span>Your profit</span><span id="rProfit">$20.20</span></div>
+      <div class="row"><span>Profit margin</span><span id="rMargin">42.1%</span></div>
+      <div class="row"><span>Effective fee rate (of item price)</span><span id="rEffRate">12.0%</span></div>
+      <div class="row"><span>Buyer Protection paid by your buyer (3.6%)</span><span id="rBP">$1.73</span></div>
+      <p class="note">The Buyer Protection fee is shown for pricing awareness only — it's added to your buyer's checkout total and never deducted from you. Sales tax is not part of Mercari's fee base.</p>
+    </div>
+  </div>
+  <div class="cta">
+    <h2>Selling on more than Mercari?</h2>
+    <p>Mercari's 10% is simple — until the same item sells on eBay, Poshmark or Depop, each with a different fee on a different base. The <strong>Reseller Profit Toolkit</strong> keeps it straight: a spreadsheet (Google Sheets + Excel) that logs every sale across Mercari, eBay, Poshmark, Depop, Etsy, Whatnot and more, applies each platform's <em>current</em> fees automatically, and rolls it up into profit, ROI and a quarterly tax set-aside.</p>
+    <p>Every fee rate in the Toolkit is verified against the platform's official pages — and when a platform changes its fees, buyers get the updated sheet. Mercari has changed its fee structure twice since 2024; the Toolkit's change log is why that won't silently corrupt your numbers.</p>
+    <a class="btn" href="https://japanrentguide.gumroad.com/l/kzbtnf?utm_source=calculator_site&utm_medium=cta&utm_campaign=mercari&utm_content=result_screen" rel="nofollow">Get the Reseller Profit Toolkit — $19 launch price through Dec 31, 2026 (then $24)</a>
+    <p class="note">Or start free with the <a href="../reseller-profit-spreadsheet/">free reseller profit spreadsheet</a> — the same verified fee math in a starter log.</p>
+    <p class="note">One-time payment. Google Sheets + Excel versions included, with a pre-filled sample copy.</p>
+  </div>
+
+  <h2>Mercari fees in 2026, at a glance (US)</h2>
+  <table>
+    <tr><th>Fee</th><th>Amount</th><th>Charged on</th><th>Who pays</th></tr>
+    <tr><td>Selling fee</td><td><strong>10% flat</strong></td><td>Item price + buyer-paid shipping</td><td>Seller</td></tr>
+    <tr><td>Payment processing</td><td><strong>None</strong> on listings created/updated since Jan 6, 2025</td><td>—</td><td>—</td></tr>
+    <tr><td>Listing</td><td><strong>Free</strong></td><td>—</td><td>—</td></tr>
+    <tr><td>Buyer Protection</td><td>3.6%</td><td>Item price + buyer-paid shipping</td><td><strong>Buyer</strong> — never deducted from your payout</td></tr>
+    <tr><td>Cash out — Direct Deposit</td><td>Free ($2 only if a withdrawal fails)</td><td>Per withdrawal</td><td>Seller</td></tr>
+    <tr><td>Cash out — Instant Pay (optional)</td><td>$3 flat</td><td>Per withdrawal, max $600/month</td><td>Seller</td></tr>
+  </table>
+  <p class="note">The 10% / 3.6% structure applies to listings created or updated since January 6, 2025; Mercari moved older listings to it automatically. Sales tax is collected separately and is not part of either fee's base.</p>
+
+  <h2>What you actually keep (no shipping charged)</h2>
+  <table>
+    <tr><th class="num">Item price</th><th class="num">Selling fee</th><th class="num">You keep</th><th class="num">Effective rate</th></tr>
+    <tr><td class="num">$10</td><td class="num">$1.00</td><td class="num">$9.00</td><td class="num">10.0%</td></tr>
+    <tr><td class="num">$25</td><td class="num">$2.50</td><td class="num">$22.50</td><td class="num">10.0%</td></tr>
+    <tr><td class="num">$50</td><td class="num">$5.00</td><td class="num">$45.00</td><td class="num">10.0%</td></tr>
+    <tr><td class="num">$100</td><td class="num">$10.00</td><td class="num">$90.00</td><td class="num">10.0%</td></tr>
+  </table>
+  <p>Now add shipping: put a $7.99 label on that $10 item and the fee becomes <strong>$1.80 — 18.0% of the item price</strong>. The fee on shipping is Mercari's hidden lever: the cheaper the item, the more the shipping inflates your real rate.</p>
+
+  <h2>How the math works</h2>
+  <p><strong>Selling fee</strong> = (item price + shipping charged to buyer) × 10%. Unlike most platforms, sales tax is <em>not</em> in the base — but shipping is, which most sellers miss.</p>
+  <p><strong>Buyer Protection</strong> = (item price + shipping charged) × 3.6%, paid by the buyer at checkout. It doesn't reduce your payout, but it does raise your buyer's all-in price: on a $40 item with $7.99 shipping, your buyer pays $1.73 extra before tax.</p>
+  <p><strong>Profit</strong> = item price + shipping charged − selling fee − item cost − your shipping cost.</p>
+  <p>Full walkthrough with worked examples: <a href="../mercari-fees-2026/">Mercari Fees 2026: One 10% Fee — With a Catch</a></p>
+
+  <h2>Fee change log</h2>
+  <table>
+    <tr><th>Date</th><th>Change</th></tr>
+    <tr><td>Mar 2024</td><td>Selling fee removed; buyers paid a service fee and payment processing instead. Sellers kept 100% of the sale price.</td></tr>
+    <tr><td>Jan 6, 2025</td><td>Structure reversed: sellers pay a flat 10% on item price + buyer-paid shipping; buyers pay 3.6% Buyer Protection; the separate payment processing fee was dropped, and the ACH direct deposit fee was removed.</td></tr>
+    <tr><td>May 7, 2026</td><td>Mercari's fees help page updated (prepaid label rates adjusted); the 10% / 3.6% structure unchanged.</td></tr>
+    <tr><td>Nov 20, 2026</td><td>Rates on this page re-verified against Mercari's Help Center. No changes found.</td></tr>
+  </table>
+
+  <h2>FAQ</h2>
+  <dl class="faq">
+    <dt>How much does Mercari take from a $50 sale?</dt>
+    <dd>$5.00 if the buyer pays no shipping — 10% of $50. If the buyer also paid $7.99 shipping, the fee is $5.80, because the 10% covers the shipping too.</dd>
+    <dt>Does Mercari charge a payment processing fee?</dt>
+    <dd>Not on listings created or updated since January 6, 2025. The old 2.9% + $0.50 processing fee was dropped when the 10% selling fee returned.</dd>
+    <dt>Do I pay the Buyer Protection fee?</dt>
+    <dd>No — your buyer pays it at checkout (3.6% of item + shipping). It's worth knowing it exists because it raises your buyer's total, but it never reduces your payout.</dd>
+    <dt>Is it cheaper to offer free shipping on Mercari?</dt>
+    <dd>Fee-wise, slightly: with free shipping there's no shipping in the fee base, so the fee is 10% of the item price alone. But you then pay the label out of the same payout — run both ways in the calculator before deciding.</dd>
+    <dt>When do I get paid?</dt>
+    <dd>Your balance is released when the transaction completes, after the buyer rates the order. Direct deposit is free; Instant Pay costs $3 per withdrawal if you want it in minutes.</dd>
+  </dl>
+
+  <footer>
+    <p>Sources (checked Nov 20, 2026): Mercari Help Center — <a href="https://www.mercari.com/us/help_center/article/2517/">Changes to our fee structure</a> ("A flat 10% selling fee applies to the completed item price and buyer-paid shipping"; buyers pay 3.6% Buyer Protection; "No additional payment processing fee"); Mercari Help Center — <a href="https://www.mercari.com/us/help_center/article/6004/">Getting paid: Direct Deposit, Instant Pay, and payout issues</a> (Instant Pay $3 per withdrawal; direct deposit free).</p>
+    <p>Not affiliated with Mercari. Mercari is a trademark of its owner; this page uses published fee schedules for calculation purposes only. Always confirm rates in Mercari's Help Center before relying on them for high-value sales.</p>
+  </footer>
+
+</div>
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var ids = ["price","shipCharged","cost","shipCost"];
+  // All money math is done in integer cents, fees rounded half-up to the cent,
+  // so results match the worked examples in the companion article exactly.
+  function cents(id){ var v = parseFloat($(id).value); return isNaN(v) || v < 0 ? 0 : Math.round(v * 100); }
+  function fmt(c){ return "$" + (c / 100).toFixed(2); }
+  function pct(part, whole){ if (whole <= 0) return "—"; var v = part / whole * 100; return (Math.round((v + 1e-9) * 10) / 10).toFixed(1) + "%"; }
+  function calc(){
+    var price = cents("price"), ship = cents("shipCharged");
+    var cost = cents("cost"), shipCost = cents("shipCost");
+    var gross = price + ship;
+    var fee = Math.round(gross * 10 / 100);          // 10% on item + buyer-paid shipping
+    var bp = Math.round(gross * 36 / 1000);          // 3.6% Buyer Protection — buyer-paid, info only
+    var payout = gross - fee;
+    var profit = payout - cost - shipCost;
+    $("rGross").textContent = fmt(gross);
+    $("rFee").textContent = "−" + fmt(fee);
+    $("rPayout").textContent = fmt(payout);
+    $("rCosts").textContent = fmt(cost + shipCost);
+    $("rProfit").textContent = fmt(profit);
+    $("rProfit").style.color = profit < 0 ? "#0073b1" : "";
+    $("rMargin").textContent = pct(profit, gross);
+    $("rEffRate").textContent = pct(fee, price);
+    $("rBP").textContent = fmt(bp);
+  }
+  ids.forEach(function(id){ $(id).addEventListener("input", calc); $(id).addEventListener("change", calc); });
+  calc();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shakaga.github.io/reseller-profit-toolkit/sitemap.xml
