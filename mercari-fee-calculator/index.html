@@ -209,5 +209,63 @@
   calc();
 })();
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CKCSEH7W37"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-CKCSEH7W37', { anonymize_ip: true });
+
+  // Thin wrapper so the analytics provider can be swapped later in one place.
+  window.rptTrack = function (eventName, params) {
+    try { gtag('event', eventName, params || {}); } catch (e) {}
+  };
+
+  (function () {
+    var path = location.pathname;
+    var platform = 'site';
+    ['depop', 'whatnot', 'poshmark', 'mercari'].forEach(function (p) {
+      if (path.indexOf(p) !== -1) platform = p;
+    });
+    if (path.indexOf('reseller-profit-spreadsheet') !== -1) platform = 'spreadsheet_template';
+
+    // --- cta_click: any Gumroad outbound link ---
+    document.querySelectorAll('a[href*="gumroad.com"]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var href = a.getAttribute('href') || '';
+        var campaign = (href.match(/utm_campaign=([^&]+)/) || [])[1] || platform;
+        var content = (href.match(/utm_content=([^&]+)/) || [])[1] || 'unknown';
+        var destination = href.indexOf('abzftp') !== -1 ? 'free_template' : 'paid_toolkit';
+        window.rptTrack('cta_click', {
+          platform: campaign,
+          placement: content,
+          destination: destination
+        });
+      });
+    });
+
+    // --- calc_complete: calculator pages only ---
+    // Calculators recalculate live on input; fire once per page session,
+    // after the user has entered a price and results have rendered (debounced).
+    var isCalculator = /-fee-calculator/.test(path);
+    if (isCalculator) {
+      var firedKey = 'rpt_calc_fired:' + path;
+      var timer = null;
+      document.addEventListener('input', function () {
+        if (sessionStorage.getItem(firedKey)) return;
+        var price = document.querySelector('#price');
+        if (!price || !(parseFloat(price.value) > 0)) return;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          var profit = document.querySelector('#rProfit');
+          if (profit && profit.textContent.trim() !== '') {
+            sessionStorage.setItem(firedKey, '1');
+            window.rptTrack('calc_complete', { platform: platform });
+          }
+        }, 800);
+      });
+    }
+  })();
+</script>
 </body>
 </html>
